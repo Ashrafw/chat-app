@@ -6,7 +6,7 @@ import { vscDarkPlus as dark } from "react-syntax-highlighter/dist/esm/styles/pr
 import remarkGfm from "remark-gfm";
 export default async function ChatContent() {
   return (
-    <div className=" w-full  h-full flex flex-col bg-slate-50 shadow-xl border rounded-lg overflow-hidden ">
+    <div className=" w-full  h-full flex flex-col bg-slate-50 shadow-xl  rounded-lg overflow-hidden ">
       <div className="h-[calc(100%-56px)]   p-2 bg-gray-50 overflow-auto ">
         <div className="prose  m-auto pb-10 pt-4">
           <Markdown
@@ -36,8 +36,8 @@ export default async function ChatContent() {
           </Markdown>
         </div>
       </div>
-      <div className=" h-14 w-full  p-2 bg-gray-80">
-        <div className="prose m-auto ">
+      <div className=" h-16 w-full  m-auto p-3 bg-primary">
+        <div className="prose m-auto w-full">
           <ChatInput />
         </div>
       </div>

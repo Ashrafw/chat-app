@@ -3,6 +3,9 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import { ClerkProvider } from "@clerk/nextjs";
+import { Toaster } from "react-hot-toast";
+import Providers from "@/components/Provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,11 +20,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className + "  h-screen w-screen overflow-hidden"}>
-        <Navbar />
-        {children}
-      </body>
-    </html>
+    <ClerkProvider>
+      <Providers>
+        <html lang="en">
+          <body className={inter.className + "  h-screen w-screen overflow-hidden"}>
+            <Navbar />
+            {children}
+            <Toaster />
+          </body>
+        </html>
+      </Providers>
+    </ClerkProvider>
   );
 }

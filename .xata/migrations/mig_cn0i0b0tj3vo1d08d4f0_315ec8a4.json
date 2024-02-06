@@ -1,0 +1,18 @@
+{
+  "id": "mig_cn0i0b0tj3vo1d08d4f0",
+  "parentID": "mig_cn0egetf2jpsksvuvr5g",
+  "checksum": "1:315ec8a48db8840c98649fe57299e6840bc0f62dc02f00b8cce5369cc23d2071",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "createdAt",
+          "type": "datetime",
+          "notNull": true,
+          "defaultValue": "now"
+        },
+        "table": "messages"
+      }
+    }
+  ]
+}

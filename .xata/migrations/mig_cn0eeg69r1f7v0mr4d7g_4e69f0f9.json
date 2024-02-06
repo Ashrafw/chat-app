@@ -1,0 +1,14 @@
+{
+  "id": "mig_cn0eeg69r1f7v0mr4d7g",
+  "parentID": "mig_cn0eeclf2jpsksvuvqvg",
+  "checksum": "1:4e69f0f93729fabe212cbaf35e49476ccbb1c1986199bae12acf9cf9cf23712b",
+  "operations": [
+    {
+      "renameColumn": {
+        "newName": "chatName",
+        "oldName": "chat-name",
+        "table": "chats"
+      }
+    }
+  ]
+}

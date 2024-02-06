@@ -1,0 +1,6 @@
+{
+  "databaseURL": "https://Ashraf-s-workspace-k9k2c2.eu-west-1.xata.sh/db/chat-app",
+  "codegen": {
+    "output": "src/xata.ts"
+  }
+}

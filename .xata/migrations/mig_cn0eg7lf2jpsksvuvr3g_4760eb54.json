@@ -1,0 +1,19 @@
+{
+  "id": "mig_cn0eg7lf2jpsksvuvr3g",
+  "parentID": "mig_cn0eg45f2jpsksvuvr2g",
+  "checksum": "1:4760eb54b7728231d673136c4a22ff514cfe871b3fe88baa04cb765692b28074",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "role",
+          "type": "vector",
+          "vector": {
+            "dimension": 2
+          }
+        },
+        "table": "messages"
+      }
+    }
+  ]
+}

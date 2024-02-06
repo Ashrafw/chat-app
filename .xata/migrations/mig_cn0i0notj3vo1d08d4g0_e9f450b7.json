@@ -1,0 +1,18 @@
+{
+  "id": "mig_cn0i0notj3vo1d08d4g0",
+  "parentID": "mig_cn0i0b0tj3vo1d08d4f0",
+  "checksum": "1:e9f450b7cf794bfb9b3eef2b0519f2eb154109ebe76f44746f483ed823b2d804",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "createdAt",
+          "type": "datetime",
+          "notNull": true,
+          "defaultValue": "now"
+        },
+        "table": "chats"
+      }
+    }
+  ]
+}

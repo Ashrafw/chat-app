@@ -9,24 +9,30 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@clerk/nextjs": "^4.29.6",
     "@radix-ui/react-slot": "^1.0.2",
-    "@tanstack/react-query": "^5.18.0",
+    "@tanstack/react-query": "^5.18.1",
     "@tanstack/react-query-devtools": "^5.18.0",
     "@types/react-syntax-highlighter": "^15.5.11",
     "@uiw/react-codemirror": "^4.21.21",
+    "@xata.io/client": "^0.29.0",
     "ai": "^2.2.33",
+    "axios": "^1.6.7",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "lucide-react": "^0.320.0",
     "next": "14.1.0",
+    "next-auth": "^4.24.5",
     "openai": "^4.26.0",
     "react": "^18",
     "react-dom": "^18",
+    "react-hot-toast": "^2.4.1",
     "react-markdown": "^9.0.1",
     "react-syntax-highlighter": "^15.5.0",
     "remark-gfm": "^4.0.0",
     "tailwind-merge": "^2.2.1",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.10",

@@ -1,0 +1,13 @@
+{
+  "id": "mig_cn0egcdf2jpsksvuvr4g",
+  "parentID": "mig_cn0eg7lf2jpsksvuvr3g",
+  "checksum": "1:e409c11e2ac55f5ccbd558a387ecfb6746988685d812203aa7199b4c40d93fc8",
+  "operations": [
+    {
+      "removeColumn": {
+        "column": "role",
+        "table": "messages"
+      }
+    }
+  ]
+}

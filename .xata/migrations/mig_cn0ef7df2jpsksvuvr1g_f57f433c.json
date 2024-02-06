@@ -1,0 +1,18 @@
+{
+  "id": "mig_cn0ef7df2jpsksvuvr1g",
+  "parentID": "mig_cn0eeudf2jpsksvuvr0g",
+  "checksum": "1:f57f433c7fcb2070d1009719638deef927f106e1e6ef9fdb9e47f08084aa9100",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "content",
+          "type": "text",
+          "notNull": true,
+          "defaultValue": "null"
+        },
+        "table": "messages"
+      }
+    }
+  ]
+}

@@ -4,9 +4,8 @@ import { Button } from "@/components/ui/button";
 import { buttonVariants } from "@/components/ui/button";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { LogOut, LogOutIcon, MessageSquareText } from "lucide-react";
+import { MessageSquareText } from "lucide-react";
 import { UserButton, auth, useUser } from "@clerk/nextjs";
-import { SignOutButton } from "@clerk/nextjs";
 const Navbar = () => {
   const { user, isLoaded } = useUser();
   return (
@@ -23,15 +22,6 @@ const Navbar = () => {
 
         {user && isLoaded ? (
           <div className="flex gap-2 items-center">
-            {/* <Link href="/"> */}
-            {/* <SignOutButton>
-              <Button variant={"ghost"}>
-                sign out
-                <LogOutIcon className="ml-2 w-5 h-5" />
-              </Button>
-            </SignOutButton> */}
-
-            {/* </Link> */}
             <UserButton afterSignOutUrl="/" />
           </div>
         ) : (

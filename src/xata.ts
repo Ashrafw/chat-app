@@ -12,13 +12,14 @@ const tables = [
     columns: [
       { name: "chatId", type: "link", link: { table: "chats" } },
       { name: "content", type: "text", notNull: true, defaultValue: "null" },
-      { name: "role", type: "string" },
       {
         name: "createdAt",
         type: "datetime",
         notNull: true,
         defaultValue: "now",
       },
+      { name: "role", type: "string", notNull: true, defaultValue: "null" },
+      { name: "userId", type: "string", notNull: true, defaultValue: "null" },
     ],
   },
   {

@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import OpenAI from "openai";
 import { Message, OpenAIStream, StreamingTextResponse } from "ai";
 import { getXataClient } from "@/xata";
+import { auth } from "@clerk/nextjs";
 
 // Create an OpenAI API client (that's edge friendly!)
 const openai = new OpenAI({
@@ -9,6 +10,8 @@ const openai = new OpenAI({
 });
 
 export async function POST(req: Request) {
+  const { userId } = await auth();
+
   const { chatId, messages } = await req.json();
   const lastMessage = messages[messages.length - 1];
   console.log("server content", lastMessage.content);
@@ -16,6 +19,12 @@ export async function POST(req: Request) {
   //   Ask OpenAI for a streaming chat completion given the prompt
   const xataClient = getXataClient();
   try {
+    if (!userId) throw new Error(" user not authenticated");
+    const _messagesLimit = await xataClient.db.messages.filter({ userId }).getAll();
+    const isLimited = _messagesLimit.length >= 16;
+    if (!isLimited) {
+      throw new Error(" you have reached the limit of the message ou can ask");
+    }
     const response = await openai.chat.completions.create({
       // messages: [{ role: "user", content }],
       messages: [...messages.filter((message: Message) => message.role === "user")],
@@ -32,6 +41,7 @@ export async function POST(req: Request) {
           role: "user",
           content: lastMessage.content,
           chatId,
+          userId,
         });
       },
       onCompletion: async (completion) => {
@@ -41,6 +51,7 @@ export async function POST(req: Request) {
           chatId,
           role: "assistant",
           content: completion,
+          userId,
         });
       },
     });

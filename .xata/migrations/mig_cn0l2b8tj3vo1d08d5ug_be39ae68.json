@@ -1,0 +1,18 @@
+{
+  "id": "mig_cn0l2b8tj3vo1d08d5ug",
+  "parentID": "mig_cn0l23kgogb09r9ag4f0",
+  "checksum": "1:be39ae688098be2649bfa830afce00fb6378a0aee9bb2fbcf2f5c3ac1ebf7a58",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "role",
+          "type": "string",
+          "notNull": true,
+          "defaultValue": "null"
+        },
+        "table": "messages"
+      }
+    }
+  ]
+}

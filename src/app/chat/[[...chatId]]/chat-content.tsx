@@ -51,7 +51,7 @@ export default function ChatContent({
     <div className=" w-full  h-full flex flex-col bg-slate-50 shadow-xl  rounded-lg overflow-hidden ">
       {data?.limit && (
         <div className=" bg-white absolute w-[70%] h-40 flex justify-center items-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-slate-50/90 p-6 rounded shadow-xl">
-          <h1 className="text-3xl font-semibold">
+          <h1 className="text-xl font-semibold">
             You have reach the limit of questions you can ask!
           </h1>
         </div>
@@ -76,7 +76,7 @@ export default function ChatContent({
                   onChange={handleInputChange}
                   placeholder="Ask any question..."
                   className="w-full "
-                  disabled={data?.limit || isLoading}
+                  disabled={isLoading}
                 />
                 <Button className="bg-slate-700">
                   <Send className="h-4 w-4" />

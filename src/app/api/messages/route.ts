@@ -1,4 +1,3 @@
-import { NextResponse } from "next/server";
 import OpenAI from "openai";
 import { Message, OpenAIStream, StreamingTextResponse } from "ai";
 import { getXataClient } from "@/xata";
@@ -22,7 +21,7 @@ export async function POST(req: Request) {
     if (!userId) throw new Error(" user not authenticated");
     const _messagesLimit = await xataClient.db.messages.filter({ userId }).getAll();
     const isLimited = _messagesLimit.length >= 16;
-    if (!isLimited) {
+    if (isLimited) {
       throw new Error(" you have reached the limit of the message ou can ask");
     }
     const response = await openai.chat.completions.create({

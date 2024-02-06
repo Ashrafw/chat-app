@@ -11,7 +11,7 @@ type Props = {
 };
 
 const MessageList = ({ messages }: Props) => {
-  if (!messages) return <div>error</div>;
+  if (!messages) return <></>;
   return (
     <div className=" flex flex-col gap-6 px-2 mb-10 ">
       {messages.map((message) => (
@@ -45,7 +45,7 @@ const MessageList = ({ messages }: Props) => {
                       // style={dark}
                       wrapLines={true}
                       wrapLongLines={true}
-                    />
+                    ></SyntaxHighlighter>
                   ) : (
                     <code {...rest} className={className}>
                       {children}

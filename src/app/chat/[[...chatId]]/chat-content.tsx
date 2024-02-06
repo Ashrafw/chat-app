@@ -76,7 +76,7 @@ export default function ChatContent({
                   onChange={handleInputChange}
                   placeholder="Ask any question..."
                   className="w-full "
-                  disabled={data.limit || isLoading}
+                  disabled={data?.limit || isLoading}
                 />
                 <Button className="bg-slate-700">
                   <Send className="h-4 w-4" />

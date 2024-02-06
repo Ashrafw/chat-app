@@ -31,7 +31,7 @@ const MessageList = ({ messages }: Props) => {
               }
             )}
           >
-            <Markdown
+            {/* <Markdown
               remarkPlugins={[remarkGfm]}
               components={{
                 code(props) {
@@ -53,9 +53,9 @@ const MessageList = ({ messages }: Props) => {
                   );
                 },
               }}
-            >
-              {message.content}
-            </Markdown>
+            > */}
+            {message.content}
+            {/* </Markdown> */}
           </div>
         </div>
       ))}

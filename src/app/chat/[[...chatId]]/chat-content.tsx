@@ -35,7 +35,7 @@ export default function ChatContent({
     },
     initialMessages: data?._messages || [],
     onError: (e) =>
-      toast.error(data.limit ? "You have reach your limit of questions" : e.message),
+      toast.error(data?.limit ? "You have reach your limit of questions" : e.message),
   });
   useEffect(() => {
     const messageContainer = document.getElementById("message-cont");
@@ -49,7 +49,7 @@ export default function ChatContent({
   console.log("messages", messages);
   return (
     <div className=" w-full  h-full flex flex-col bg-slate-50 shadow-xl  rounded-lg overflow-hidden ">
-      {data.limit && (
+      {data?.limit && (
         <div className=" bg-white absolute w-[70%] h-40 flex justify-center items-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-slate-50/90 p-6 rounded shadow-xl">
           <h1 className="text-3xl font-semibold">
             You have reach the limit of questions you can ask!
@@ -65,7 +65,7 @@ export default function ChatContent({
       </div>
       <div className="  w-full  m-auto  bg-primary">
         <div className="prose m-auto w-full">
-          {!data.limit && (
+          {!data?.limit && (
             <form
               onSubmit={handleSubmit}
               className="sticky bottom-0 inset-x-0 px-1 py-3 "
